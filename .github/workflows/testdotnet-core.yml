@@ -67,7 +67,7 @@ docker_build_and_push:
             repo: context.repo.repo,
             title: "${{ env.build_name }} Workflow ${{ github.run_number }} Failed! ",
             body: body
-          }};
+          });
           
   deploy_staging:
     if: github.ref == 'refs/heads/master'
